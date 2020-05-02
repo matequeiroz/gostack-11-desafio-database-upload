@@ -6,7 +6,7 @@ export default class CreateTableTransaction1588293768205
     await queryRunner.query(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`);
     await queryRunner.createTable(
       new Table({
-        name: 'tb_transactions',
+        name: 'transactions',
         columns: [
           {
             name: 'id',
@@ -53,6 +53,6 @@ export default class CreateTableTransaction1588293768205
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('tb_transactions');
+    await queryRunner.dropTable('transactions');
   }
 }

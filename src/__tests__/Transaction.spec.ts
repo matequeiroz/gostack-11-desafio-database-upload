@@ -17,8 +17,8 @@ describe('Transaction', () => {
   });
 
   beforeEach(async () => {
-    await connection.query('DELETE FROM tb_transactions');
-    await connection.query('DELETE FROM tb_categories');
+    await connection.query('DELETE FROM transactions');
+    await connection.query('DELETE FROM categories');
   });
 
   afterAll(async () => {
